@@ -384,7 +384,7 @@
 			children = (
 				2D17B62D1F151E3600737C4F /* GalleryViewController */,
 				2D17B62F1F151E3600737C4F /* GIFViewController */,
-				2D17B6301F151E3600737C4F /* ImageDetailViewController */,
+				2D17B6361F15296D00737C4F /* AddPictureViewController */,
 				2D17B6311F151E3600737C4F /* LoginViewController */,
 			);
 			path = UI;
@@ -412,13 +412,6 @@
 			path = GIFViewController;
 			sourceTree = "<group>";
 		};
-		2D17B6301F151E3600737C4F /* ImageDetailViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ImageDetailViewController;
-			sourceTree = "<group>";
-		};
 		2D17B6311F151E3600737C4F /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +419,13 @@
 				2D17B6331F151E3600737C4F /* LoginViewController.xib */,
 			);
 			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		2D17B6361F15296D00737C4F /* AddPictureViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddPictureViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
