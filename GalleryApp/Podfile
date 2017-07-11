@@ -1,0 +1,8 @@
+# Podfile
+use_frameworks!
+
+target 'GalleryApp' do
+	pod 'IDPCastable'
+	pod 'Kingfisher'
+end
+

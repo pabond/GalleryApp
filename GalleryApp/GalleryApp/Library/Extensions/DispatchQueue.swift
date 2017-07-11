@@ -6,6 +6,8 @@
 //  Copyright © 2017 Pavel Bondar. All rights reserved.
 //
 
+import Foundation
+
 extension DispatchQueue {
     
     internal static func ProcessedBackground<Result>(backgroundProcessed: @escaping ()->(Result),

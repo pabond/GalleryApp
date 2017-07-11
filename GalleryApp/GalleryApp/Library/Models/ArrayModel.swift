@@ -6,6 +6,8 @@
 //  Copyright © 2016 Pavel Bondar. All rights reserved.
 //
 
+import Foundation
+
 let notFound = Int(INT_MAX)
 
 enum ModelChangeState {
