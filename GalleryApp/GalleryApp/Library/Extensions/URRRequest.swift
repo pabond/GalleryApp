@@ -19,6 +19,7 @@ extension URLRequest {
     }
     
     mutating func addValuesForKeys(_ values: [String : String]) {
-        values.forEach { self.addValue($0.value, forHTTPHeaderField: $0.key) }
+        values.forEach { self.addValue($0.value, forHTTPHeaderField: $0.key)
+        }
     }
 }

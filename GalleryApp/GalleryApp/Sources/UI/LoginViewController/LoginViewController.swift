@@ -18,30 +18,54 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
     }
 
     @IBAction func onSend(_ sender: Any) {
-        if let email = emailValidation(), let password = passwordValidation() {
-            let loginContext = LoginContext()
+        if let email = emailValidation(), let password = passwordValidation(), let wSelf = weakSelf(self) {
+            let loginContext = LoginContext(email: email,
+                                            password: password,
+                                            success: wSelf.loginSuccess,
+                                            fail: wSelf.loginFailed)
             
-            let wSelf = weakSelf(self)
-            loginContext.execute(email: email,
-                                 password: password,
-                                 success: {
-                             wSelf?.loginSuccess()
-            }, fail: {
-                wSelf?.loginFailed()
-            })
+            loginContext.execute()
         }
     }
     
     @IBAction func onAvatar(_ sender: Any) {
-        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true)
+        }
     }
     
     private func loginSuccess() {
-        
+        let galleryController = GalleryViewController.viewController()
+        let navController = UINavigationController(rootViewController: galleryController)
+        present(navController, animated: true)
     }
     
     private func loginFailed() {
+        if let email = emailValidation(), let password = passwordValidation(), let image = avatarValidateion() {
+            let signUpContext = SignUpContext(email: email,
+                                              password: password,
+                                              avatar: image,
+                                              userName: rootView?.userNameTextField.text,
+                                              success: loginSuccess,
+                                              fail: singUpFailed)
+            signUpContext.execute()
+        }
+    }
     
+    private func singUpFailed() {
+        infoAlert(title: "Failed", text: "Please check your internet connection")
+    }
+        
+    private func avatarValidateion() -> UIImage? {
+        let avatar = rootView?.avatarImageView.image.flatMap { $0 != #imageLiteral(resourceName: "DefaultAvatar") ? $0 : nil }
+        if avatar == nil {
+            self.infoAlert(title: "Avatar not set", text: "Please set your avatar")
+        }
+        
+        return avatar
     }
     
     private func emailValidation() -> String? {
@@ -60,5 +84,15 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
         }
         
         return password
+    }
+
+}
+
+extension LoginViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        info[UIImagePickerControllerOriginalImage]
+            .flatMap { $0 as? UIImage }
+            .map { self.rootView?.avatarImageView.image = $0 }
+        picker.dismiss(animated: true)
     }
 }

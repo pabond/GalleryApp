@@ -65,6 +65,12 @@
 		2D17B6421F15380700737C4F /* LoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B6411F15380700737C4F /* LoginContext.swift */; };
 		2D17B6441F1542A900737C4F /* URRRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B6431F1542A900737C4F /* URRRequest.swift */; };
 		2D17B6461F15473C00737C4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B6451F15473C00737C4F /* Constants.swift */; };
+		2D17B6481F155B3300737C4F /* SignUpContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B6471F155B3300737C4F /* SignUpContext.swift */; };
+		2D17B64A1F155E8E00737C4F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B6491F155E8E00737C4F /* UIImage.swift */; };
+		2D17B64D1F1689AE00737C4F /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B64B1F1689AE00737C4F /* GalleryViewController.swift */; };
+		2D17B64E1F1689AE00737C4F /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D17B64C1F1689AE00737C4F /* GalleryViewController.xib */; };
+		2D17B6501F1691C100737C4F /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B64F1F1691C100737C4F /* Context.swift */; };
+		2D17B6521F16AD2200737C4F /* AutentificationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B6511F16AD2200737C4F /* AutentificationContext.swift */; };
 		F09BC2EBF417B2268F1D91F4 /* Pods_GalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13852D582E17637951C8125 /* Pods_GalleryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +137,12 @@
 		2D17B6411F15380700737C4F /* LoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContext.swift; sourceTree = "<group>"; };
 		2D17B6431F1542A900737C4F /* URRRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URRRequest.swift; sourceTree = "<group>"; };
 		2D17B6451F15473C00737C4F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2D17B6471F155B3300737C4F /* SignUpContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpContext.swift; sourceTree = "<group>"; };
+		2D17B6491F155E8E00737C4F /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		2D17B64B1F1689AE00737C4F /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		2D17B64C1F1689AE00737C4F /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
+		2D17B64F1F1691C100737C4F /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		2D17B6511F16AD2200737C4F /* AutentificationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutentificationContext.swift; sourceTree = "<group>"; };
 		318E3A903BBA98F80321EC8A /* Pods-GalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.release.xcconfig"; sourceTree = "<group>"; };
 		CAE5B27531AE4DFC71879050 /* Pods-GalleryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E13852D582E17637951C8125 /* Pods_GalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +243,7 @@
 				2D17B5C71F151D0C00737C4F /* UIViewController.swift */,
 				2D17B5C81F151D0C00737C4F /* UIWindow.swift */,
 				2D17B6431F1542A900737C4F /* URRRequest.swift */,
+				2D17B6491F155E8E00737C4F /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				2D17B62E1F151E3600737C4F /* GalleryImageCell */,
+				2D17B64B1F1689AE00737C4F /* GalleryViewController.swift */,
+				2D17B64C1F1689AE00737C4F /* GalleryViewController.xib */,
 			);
 			path = GalleryViewController;
 			sourceTree = "<group>";
@@ -461,7 +476,10 @@
 		2D17B63E1F1537B100737C4F /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
+				2D17B64F1F1691C100737C4F /* Context.swift */,
+				2D17B6511F16AD2200737C4F /* AutentificationContext.swift */,
 				2D17B6411F15380700737C4F /* LoginContext.swift */,
+				2D17B6471F155B3300737C4F /* SignUpContext.swift */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -547,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D17B6351F151E3600737C4F /* LoginViewController.xib in Resources */,
+				2D17B64E1F1689AE00737C4F /* GalleryViewController.xib in Resources */,
 				2D17B5AA1F151A5C00737C4F /* LaunchScreen.storyboard in Resources */,
 				2D17B5A71F151A5C00737C4F /* Assets.xcassets in Resources */,
 			);
@@ -632,11 +651,15 @@
 				2D17B5A01F151A5C00737C4F /* AppDelegate.swift in Sources */,
 				2D17B5FE1F151D0C00737C4F /* String.swift in Sources */,
 				2D17B6211F151D0C00737C4F /* SlideOutAnimationController.swift in Sources */,
+				2D17B6481F155B3300737C4F /* SignUpContext.swift in Sources */,
 				2D17B6181F151D0C00737C4F /* OneIndexArrayChange.swift in Sources */,
 				2D17B6061F151D0C00737C4F /* UIViewController.swift in Sources */,
 				2D17B6171F151D0C00737C4F /* UpdateModel.swift in Sources */,
 				2D17B6381F152A5500737C4F /* LoginView.swift in Sources */,
 				2D17B61D1F151D0C00737C4F /* Weakable.swift in Sources */,
+				2D17B6521F16AD2200737C4F /* AutentificationContext.swift in Sources */,
+				2D17B64D1F1689AE00737C4F /* GalleryViewController.swift in Sources */,
+				2D17B6501F1691C100737C4F /* Context.swift in Sources */,
 				2D17B6071F151D0C00737C4F /* UIWindow.swift in Sources */,
 				2D17B5F91F151D0C00737C4F /* Array.swift in Sources */,
 				2D17B6341F151E3600737C4F /* LoginViewController.swift in Sources */,
@@ -660,6 +683,7 @@
 				2D17B6161F151D0C00737C4F /* UpdateModel + UITableView.swift in Sources */,
 				2D17B61B1F151D0C00737C4F /* Model.swift in Sources */,
 				2D17B6011F151D0C00737C4F /* UIImageView + KingfisherLoad.swift in Sources */,
+				2D17B64A1F155E8E00737C4F /* UIImage.swift in Sources */,
 				2D17B6221F151D0C00737C4F /* TableViewController.swift in Sources */,
 				2D17B5F71F151D0C00737C4F /* BPVMacro.m in Sources */,
 			);
@@ -778,6 +802,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CAE5B27531AE4DFC71879050 /* Pods-GalleryApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 66W997F46F;
@@ -795,6 +820,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 318E3A903BBA98F80321EC8A /* Pods-GalleryApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 66W997F46F;
