@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,14 +17,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="LoginView" customModule="GalleryApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1t1-io-M0b" customClass="RoundView" customModule="GalleryApp" customModuleProvider="target">
-                    <rect key="frame" x="106.5" y="80" width="107" height="106.5"/>
+                    <rect key="frame" x="138" y="80" width="138" height="138"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-6D-JrT">
-                            <rect key="frame" x="0.0" y="0.0" width="107" height="106.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="138"/>
                         </imageView>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSm-dQ-2HR">
                             <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
@@ -43,46 +43,46 @@
                     </constraints>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WAx-pb-gW2">
-                    <rect key="frame" x="30" y="257" width="260" height="17"/>
+                    <rect key="frame" x="30" y="288.66666666666669" width="354" height="17"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ksb-Dh-xya">
-                    <rect key="frame" x="30" y="294" width="260" height="17"/>
+                    <rect key="frame" x="30" y="325.66666666666669" width="354" height="17"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-nS-Wtb">
-                    <rect key="frame" x="25" y="274" width="270" height="1"/>
+                    <rect key="frame" x="25" y="305.66666666666669" width="364" height="1"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="UYr-T9-ufv"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ST-S0-G1P">
-                    <rect key="frame" x="25" y="311" width="270" height="1"/>
+                    <rect key="frame" x="25" y="342.66666666666669" width="364" height="1"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="pSf-jb-S7a"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ege-xM-AwK">
-                    <rect key="frame" x="25" y="348" width="270" height="1"/>
+                    <rect key="frame" x="25" y="379.66666666666669" width="364" height="1"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="ht8-M3-MD2"/>
                     </constraints>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCt-kb-OVn">
-                    <rect key="frame" x="30" y="331" width="260" height="17"/>
+                    <rect key="frame" x="30" y="362.66666666666669" width="354" height="17"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMJ-MY-6wS">
-                    <rect key="frame" x="25" y="389" width="270" height="50"/>
+                    <rect key="frame" x="25" y="420.66666666666669" width="364" height="50"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Rt2-C1-OpX"/>
@@ -134,6 +134,6 @@
         </view>
     </objects>
     <resources>
-        <image name="DefaultAvatar" width="64" height="64"/>
+        <image name="DefaultAvatar" width="42" height="42"/>
     </resources>
 </document>

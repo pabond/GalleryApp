@@ -13,4 +13,10 @@ struct Constants {
     static let username = "username"
     static let password = "password"
     static let avatar = "avatar"
+    
+    static let token = "token"
+    static let creationTime = "creation_time"
+    
+    static let JPEG = "jpeg"
+    static let imageJPEG = "image/\(JPEG)"
 }

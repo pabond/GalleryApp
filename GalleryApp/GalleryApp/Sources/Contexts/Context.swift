@@ -7,11 +7,64 @@
 //
 
 import UIKit
+import Alamofire
 
 class Context : NSObject, Weakable {
-    internal var headers : [String : String] {
-        return ["":""]
+    internal var success: ((_ : User)->())?
+    internal var fail: (()->())?
+    internal var user: User?
+    
+    private var requestURLString: String {
+        return "\(Constants.baseURL)\(reqestTail)"
     }
     
-    func execute() {}
+    // MARK: - these variabels can be overwritten in subclasses
+    internal var httpMethod : HTTPMethod = .post
+    internal var reqestTail: String {
+        return ""
+    }
+    
+    // MARK: - initialization
+    
+    init(user: User?,
+         success: ((_ : User)->())?,
+         fail: (()->())?) {
+        self.success = success
+        self.fail = fail
+        self.user = user
+    }
+    
+    func execute() {
+        guard let url = URL(string: requestURLString),
+            let urlRequest = try? URLRequest(url: url, method: self.httpMethod),
+            let wSelf = weakSelf(self)
+            else { return }
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            wSelf.fillMultipartFormData(multipartFormData)
+        }, with: urlRequest) { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    wSelf.processResponse(response)
+                }
+            case .failure(_):
+                wSelf.callCompletion()
+            }
+        }
+    }
+    
+    func callCompletion(_ model : User? = nil) {
+        DispatchQueue.main.async { [weak self] in
+            if let model = model {
+                self?.success?(model)
+            } else {
+                self?.fail?()
+            }
+        }
+    }
+    
+    // MARK: - these methods should be overwritten in subclasses
+    internal func processResponse(_ response: DataResponse<Any>) {}
+    internal func fillMultipartFormData(_ multipartFormData: MultipartFormData) {}
 }

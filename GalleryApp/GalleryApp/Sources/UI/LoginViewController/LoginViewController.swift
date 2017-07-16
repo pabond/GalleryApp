@@ -19,10 +19,11 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
 
     @IBAction func onSend(_ sender: Any) {
         if let email = emailValidation(), let password = passwordValidation(), let wSelf = weakSelf(self) {
-            let loginContext = LoginContext(email: email,
+            let loginContext = LoginContext(success: wSelf.loginSuccess,
+                                            fail: wSelf.loginFailed,
+                                            user: User(),
                                             password: password,
-                                            success: wSelf.loginSuccess,
-                                            fail: wSelf.loginFailed)
+                                            email: email)
             
             loginContext.execute()
         }
@@ -37,7 +38,7 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
         }
     }
     
-    private func loginSuccess() {
+    private func loginSuccess(_ user : User) {
         let galleryController = GalleryViewController.viewController()
         let navController = UINavigationController(rootViewController: galleryController)
         present(navController, animated: true)
@@ -45,12 +46,13 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
     
     private func loginFailed() {
         if let email = emailValidation(), let password = passwordValidation(), let image = avatarValidateion() {
-            let signUpContext = SignUpContext(email: email,
+            let signUpContext = SignUpContext(success: loginSuccess,
+                                              fail: singUpFailed,
+                                              user: User(),
                                               password: password,
+                                              email: email,
                                               avatar: image,
-                                              userName: rootView?.userNameTextField.text,
-                                              success: loginSuccess,
-                                              fail: singUpFailed)
+                                              userName: rootView?.userNameTextField.text)
             signUpContext.execute()
         }
     }

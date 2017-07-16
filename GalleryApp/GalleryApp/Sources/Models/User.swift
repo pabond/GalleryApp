@@ -8,6 +8,12 @@
 
 import UIKit
 
-class User: NSObject {
-
+struct User {
+    var avatarUrlString : String = ""
+    var creationTime : String = ""
+    var token : String = ""
+    
+    var avatarURL: URL? {
+        return URL(string: avatarUrlString)
+    }
 }
