@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class LoginContext: AutentificationContext {
+class LoginContext: AuthorisationContext {
     
     override var reqestTail: String {
         return "/login"
