@@ -12,6 +12,7 @@ struct User {
     var avatarUrlString : String = ""
     var creationTime : String = ""
     var token : String = ""
+    var images : [GalleryImage]?
     
     var avatarURL: URL? {
         return URL(string: avatarUrlString)

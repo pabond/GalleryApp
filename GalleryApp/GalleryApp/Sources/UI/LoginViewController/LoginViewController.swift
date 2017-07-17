@@ -39,7 +39,8 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
     }
     
     private func loginSuccess(_ user : User) {
-        let galleryController = GalleryViewController.viewController()
+        guard let galleryController = GalleryViewController.viewController() as? GalleryViewController else { return }
+        galleryController.user = user
         let navController = UINavigationController(rootViewController: galleryController)
         present(navController, animated: true)
     }

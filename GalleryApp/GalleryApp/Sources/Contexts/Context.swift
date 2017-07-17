@@ -19,9 +19,16 @@ class Context : NSObject, Weakable {
     }
     
     // MARK: - these variabels can be overwritten in subclasses
-    internal var httpMethod : HTTPMethod = .post
+    internal var httpMethod : HTTPMethod {
+        return .post
+    }
+    
     internal var reqestTail: String {
         return ""
+    }
+    
+    internal var headers: HTTPHeaders? {
+        return [:]
     }
     
     // MARK: - initialization
@@ -36,7 +43,7 @@ class Context : NSObject, Weakable {
     
     func execute() {
         guard let url = URL(string: requestURLString),
-            let urlRequest = try? URLRequest(url: url, method: self.httpMethod),
+            let urlRequest = try? URLRequest.init(url: url, method: self.httpMethod, headers: self.headers),
             let wSelf = weakSelf(self)
             else { return }
         
@@ -55,11 +62,11 @@ class Context : NSObject, Weakable {
     }
     
     func callCompletion(_ model : User? = nil) {
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.async {
             if let model = model {
-                self?.success?(model)
+                self.success?(model)
             } else {
-                self?.fail?()
+                self.fail?()
             }
         }
     }

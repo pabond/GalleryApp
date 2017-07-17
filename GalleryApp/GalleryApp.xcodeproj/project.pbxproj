@@ -71,6 +71,16 @@
 		2D717D711F1BD49200848F1A /* AuthorisationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D717D6E1F1BD49200848F1A /* AuthorisationContext.swift */; };
 		2D717D721F1BD49200848F1A /* LoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D717D6F1F1BD49200848F1A /* LoginContext.swift */; };
 		2D717D731F1BD49200848F1A /* SignUpContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D717D701F1BD49200848F1A /* SignUpContext.swift */; };
+		2DA050511F1BE95200E7EBC3 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050501F1BE95200E7EBC3 /* GalleryView.swift */; };
+		2DA050541F1BE9A600E7EBC3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050521F1BE9A600E7EBC3 /* CollectionViewCell.swift */; };
+		2DA050551F1BE9A600E7EBC3 /* GalleryImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA050531F1BE9A600E7EBC3 /* GalleryImageCell.xib */; };
+		2DA050571F1BEFB500E7EBC3 /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050561F1BEFB500E7EBC3 /* GalleryImage.swift */; };
+		2DA0505F1F1CB7B500E7EBC3 /* BPVLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0505A1F1CB7B500E7EBC3 /* BPVLoadingView.m */; };
+		2DA050601F1CB7B500E7EBC3 /* BPVLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA0505B1F1CB7B500E7EBC3 /* BPVLoadingView.xib */; };
+		2DA050611F1CB7B500E7EBC3 /* BPVView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0505E1F1CB7B500E7EBC3 /* BPVView.m */; };
+		2DA0506A1F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050691F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m */; };
+		2DA050711F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0506D1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m */; };
+		2DA050741F1CBED300E7EBC3 /* AllImagesContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050731F1CBED300E7EBC3 /* AllImagesContext.swift */; };
 		F09BC2EBF417B2268F1D91F4 /* Pods_GalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13852D582E17637951C8125 /* Pods_GalleryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +153,21 @@
 		2D717D6E1F1BD49200848F1A /* AuthorisationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorisationContext.swift; sourceTree = "<group>"; };
 		2D717D6F1F1BD49200848F1A /* LoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContext.swift; sourceTree = "<group>"; };
 		2D717D701F1BD49200848F1A /* SignUpContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpContext.swift; sourceTree = "<group>"; };
+		2DA050501F1BE95200E7EBC3 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		2DA050521F1BE9A600E7EBC3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2DA050531F1BE9A600E7EBC3 /* GalleryImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryImageCell.xib; sourceTree = "<group>"; };
+		2DA050561F1BEFB500E7EBC3 /* GalleryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
+		2DA050591F1CB7B500E7EBC3 /* BPVLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPVLoadingView.h; sourceTree = "<group>"; };
+		2DA0505A1F1CB7B500E7EBC3 /* BPVLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPVLoadingView.m; sourceTree = "<group>"; };
+		2DA0505B1F1CB7B500E7EBC3 /* BPVLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BPVLoadingView.xib; sourceTree = "<group>"; };
+		2DA0505D1F1CB7B500E7EBC3 /* BPVView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPVView.h; sourceTree = "<group>"; };
+		2DA0505E1F1CB7B500E7EBC3 /* BPVView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPVView.m; sourceTree = "<group>"; };
+		2DA050661F1CBC3100E7EBC3 /* GalleryApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GalleryApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		2DA050681F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+BPVExtensions.h"; sourceTree = "<group>"; };
+		2DA050691F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+BPVExtensions.m"; sourceTree = "<group>"; };
+		2DA0506C1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BPVExtensions.h"; sourceTree = "<group>"; };
+		2DA0506D1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BPVExtensions.m"; sourceTree = "<group>"; };
+		2DA050731F1CBED300E7EBC3 /* AllImagesContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllImagesContext.swift; sourceTree = "<group>"; };
 		318E3A903BBA98F80321EC8A /* Pods-GalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.release.xcconfig"; sourceTree = "<group>"; };
 		CAE5B27531AE4DFC71879050 /* Pods-GalleryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E13852D582E17637951C8125 /* Pods_GalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +210,7 @@
 				2D17B5F61F151D0C00737C4F /* Sources */,
 				2D17B59F1F151A5C00737C4F /* AppDelegate.swift */,
 				2D17B6451F15473C00737C4F /* Constants.swift */,
+				2DA050661F1CBC3100E7EBC3 /* GalleryApp-Bridging-Header.h */,
 				2D17B5A61F151A5C00737C4F /* Assets.xcassets */,
 				2D17B5A81F151A5C00737C4F /* LaunchScreen.storyboard */,
 				2D17B5AB1F151A5C00737C4F /* Info.plist */,
@@ -228,6 +254,8 @@
 		2D17B5B71F151D0C00737C4F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2DA0506B1F1CBD8B00E7EBC3 /* NSArray */,
+				2DA050671F1CBD0200E7EBC3 /* NSBundle */,
 				2D17B5B81F151D0C00737C4F /* Array.swift */,
 				2D17B5B91F151D0C00737C4F /* DispatchQueue.swift */,
 				2D17B5BA1F151D0C00737C4F /* Enum + Extensions.swift */,
@@ -389,6 +417,8 @@
 		2D17B5F31F151D0C00737C4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2DA050581F1CB7B500E7EBC3 /* BPVLoadingView */,
+				2DA0505C1F1CB7B500E7EBC3 /* BPVView */,
 				2D17B5F41F151D0C00737C4F /* RoundedView.swift */,
 				2D17B5F51F151D0C00737C4F /* RoundView.swift */,
 			);
@@ -409,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				2D17B6391F152E5800737C4F /* User.swift */,
+				2DA050561F1BEFB500E7EBC3 /* GalleryImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -418,7 +449,7 @@
 			children = (
 				2D17B62D1F151E3600737C4F /* GalleryViewController */,
 				2D17B62F1F151E3600737C4F /* GIFViewController */,
-				2D17B6361F15296D00737C4F /* AddPictureViewController */,
+				2DA050751F1CD08D00E7EBC3 /* AddImageViewController */,
 				2D17B6311F151E3600737C4F /* LoginViewController */,
 			);
 			path = UI;
@@ -430,6 +461,7 @@
 				2D17B62E1F151E3600737C4F /* GalleryImageCell */,
 				2D17B64B1F1689AE00737C4F /* GalleryViewController.swift */,
 				2D17B64C1F1689AE00737C4F /* GalleryViewController.xib */,
+				2DA050501F1BE95200E7EBC3 /* GalleryView.swift */,
 			);
 			path = GalleryViewController;
 			sourceTree = "<group>";
@@ -437,6 +469,8 @@
 		2D17B62E1F151E3600737C4F /* GalleryImageCell */ = {
 			isa = PBXGroup;
 			children = (
+				2DA050521F1BE9A600E7EBC3 /* CollectionViewCell.swift */,
+				2DA050531F1BE9A600E7EBC3 /* GalleryImageCell.xib */,
 			);
 			path = GalleryImageCell;
 			sourceTree = "<group>";
@@ -458,13 +492,6 @@
 			path = LoginViewController;
 			sourceTree = "<group>";
 		};
-		2D17B6361F15296D00737C4F /* AddPictureViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddPictureViewController;
-			sourceTree = "<group>";
-		};
 		2D17B63B1F15323000737C4F /* Structs */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +505,7 @@
 			children = (
 				2D17B64F1F1691C100737C4F /* Context.swift */,
 				2D717D6D1F1BD49200848F1A /* AuthorisationContext */,
+				2DA050731F1CBED300E7EBC3 /* AllImagesContext.swift */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -490,6 +518,50 @@
 				2D717D701F1BD49200848F1A /* SignUpContext.swift */,
 			);
 			path = AuthorisationContext;
+			sourceTree = "<group>";
+		};
+		2DA050581F1CB7B500E7EBC3 /* BPVLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				2DA050591F1CB7B500E7EBC3 /* BPVLoadingView.h */,
+				2DA0505A1F1CB7B500E7EBC3 /* BPVLoadingView.m */,
+				2DA0505B1F1CB7B500E7EBC3 /* BPVLoadingView.xib */,
+			);
+			path = BPVLoadingView;
+			sourceTree = "<group>";
+		};
+		2DA0505C1F1CB7B500E7EBC3 /* BPVView */ = {
+			isa = PBXGroup;
+			children = (
+				2DA0505D1F1CB7B500E7EBC3 /* BPVView.h */,
+				2DA0505E1F1CB7B500E7EBC3 /* BPVView.m */,
+			);
+			path = BPVView;
+			sourceTree = "<group>";
+		};
+		2DA050671F1CBD0200E7EBC3 /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				2DA050681F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.h */,
+				2DA050691F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m */,
+			);
+			path = NSBundle;
+			sourceTree = "<group>";
+		};
+		2DA0506B1F1CBD8B00E7EBC3 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				2DA0506C1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.h */,
+				2DA0506D1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		2DA050751F1CD08D00E7EBC3 /* AddImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddImageViewController;
 			sourceTree = "<group>";
 		};
 		B73EBFACEAFF6282450D4BAB /* Pods */ = {
@@ -574,8 +646,10 @@
 			files = (
 				2D17B6351F151E3600737C4F /* LoginViewController.xib in Resources */,
 				2D17B64E1F1689AE00737C4F /* GalleryViewController.xib in Resources */,
+				2DA050601F1CB7B500E7EBC3 /* BPVLoadingView.xib in Resources */,
 				2D17B5AA1F151A5C00737C4F /* LaunchScreen.storyboard in Resources */,
 				2D17B5A71F151A5C00737C4F /* Assets.xcassets in Resources */,
+				2DA050551F1BE9A600E7EBC3 /* GalleryImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,8 +710,10 @@
 			files = (
 				2D17B5FC1F151D0C00737C4F /* NSFileManager+BPVExtensions.m in Sources */,
 				2D17B6101F151D0C00737C4F /* MoveModel + UITableView.swift in Sources */,
+				2DA050511F1BE95200E7EBC3 /* GalleryView.swift in Sources */,
 				2D17B61C1F151D0C00737C4F /* RootViewGettable.swift in Sources */,
 				2D17B60E1F151D0C00737C4F /* AddModel.swift in Sources */,
+				2DA050741F1CBED300E7EBC3 /* AllImagesContext.swift in Sources */,
 				2D17B6191F151D0C00737C4F /* TwoIndexArrayChange.swift in Sources */,
 				2D17B60B1F151D0C00737C4F /* ArrayChange.swift in Sources */,
 				2D17B6141F151D0C00737C4F /* RemoveModel.swift in Sources */,
@@ -647,23 +723,28 @@
 				2D17B6251F151D0C00737C4F /* RoundedView.swift in Sources */,
 				2D17B63D1F15328400737C4F /* Email.swift in Sources */,
 				2D17B6041F151D0C00737C4F /* UITableView.swift in Sources */,
+				2DA050541F1BE9A600E7EBC3 /* CollectionViewCell.swift in Sources */,
 				2D17B6111F151D0C00737C4F /* MoveModel.swift in Sources */,
 				2D17B61F1F151D0C00737C4F /* SlideInPresentationController.swift in Sources */,
 				2D17B6051F151D0C00737C4F /* UIViewController+AddRemoveChild.swift in Sources */,
 				2D17B60C1F151D0C00737C4F /* AddModel + UICollectionView.swift in Sources */,
+				2DA050611F1CB7B500E7EBC3 /* BPVView.m in Sources */,
 				2D17B6231F151D0C00737C4F /* TrancitionViewController.swift in Sources */,
 				2D17B61E1F151D0C00737C4F /* SlideInPresentationAnimator.swift in Sources */,
 				2D17B60F1F151D0C00737C4F /* MoveModel + UICollectionView.swift in Sources */,
 				2D17B5FB1F151D0C00737C4F /* Enum + Extensions.swift in Sources */,
 				2D17B61A1F151D0C00737C4F /* ArrayModel.swift in Sources */,
+				2DA050711F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m in Sources */,
 				2D17B5A01F151A5C00737C4F /* AppDelegate.swift in Sources */,
 				2D17B5FE1F151D0C00737C4F /* String.swift in Sources */,
 				2D17B6211F151D0C00737C4F /* SlideOutAnimationController.swift in Sources */,
 				2D17B6181F151D0C00737C4F /* OneIndexArrayChange.swift in Sources */,
+				2DA0506A1F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m in Sources */,
 				2D17B6061F151D0C00737C4F /* UIViewController.swift in Sources */,
 				2D17B6171F151D0C00737C4F /* UpdateModel.swift in Sources */,
 				2D17B6381F152A5500737C4F /* LoginView.swift in Sources */,
 				2D17B61D1F151D0C00737C4F /* Weakable.swift in Sources */,
+				2DA050571F1BEFB500E7EBC3 /* GalleryImage.swift in Sources */,
 				2D17B64D1F1689AE00737C4F /* GalleryViewController.swift in Sources */,
 				2D17B6501F1691C100737C4F /* Context.swift in Sources */,
 				2D17B6071F151D0C00737C4F /* UIWindow.swift in Sources */,
@@ -675,6 +756,7 @@
 				2D17B6241F151D0C00737C4F /* ViewController.swift in Sources */,
 				2D717D721F1BD49200848F1A /* LoginContext.swift in Sources */,
 				2D17B6081F151D0C00737C4F /* Functions.swift in Sources */,
+				2DA0505F1F1CB7B500E7EBC3 /* BPVLoadingView.m in Sources */,
 				2D17B6091F151D0C00737C4F /* ArrayChange + UICollectionView.swift in Sources */,
 				2D17B6021F151D0C00737C4F /* UINavigationController.swift in Sources */,
 				2D17B5F81F151D0C00737C4F /* Lock.swift in Sources */,
@@ -820,6 +902,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pavelbondar.GalleryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GalleryApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -838,6 +921,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pavelbondar.GalleryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GalleryApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
