@@ -15,8 +15,8 @@ class GalleryImageCell: UICollectionViewCell {
     
     func fillWith(_ object : GalleryImage?) {
         guard let imageModel = object else { return }
-        weatherLabel.text = imageModel.weather
-        addressLabel.text = imageModel.address
+        weatherLabel.text = imageModel.tags.joined(separator: ", ")
+        addressLabel.text = imageModel.discription
         URL(string: imageModel.imageUrlString).map {
             imageView.image(withURL: $0)
         }

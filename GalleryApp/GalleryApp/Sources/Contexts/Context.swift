@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class Context : NSObject, Weakable {
-    internal var success: ((_ : User)->())?
+    internal var success: ((_ : Any)->())?
     internal var fail: (()->())?
     internal var user: User?
     
@@ -34,7 +34,7 @@ class Context : NSObject, Weakable {
     // MARK: - initialization
     
     init(user: User?,
-         success: ((_ : User)->())?,
+         success: ((_ : Any)->())?,
          fail: (()->())?) {
         self.success = success
         self.fail = fail
@@ -61,7 +61,7 @@ class Context : NSObject, Weakable {
         }
     }
     
-    func callCompletion(_ model : User? = nil) {
+    func callCompletion(_ model : Any? = nil) {
         DispatchQueue.main.async {
             if let model = model {
                 self.success?(model)

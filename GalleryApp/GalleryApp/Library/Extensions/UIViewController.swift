@@ -40,7 +40,8 @@ extension UIViewController {
     }
     
     class func nibName() -> String {
-        return  String(describing: self)
+        let name = String(describing: self)
+        return name
     }
     
     func viewGetter<V>() -> V? {

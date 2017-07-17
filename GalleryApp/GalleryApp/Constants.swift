@@ -19,4 +19,7 @@ struct Constants {
     
     static let JPEG = "jpeg"
     static let imageJPEG = "image/\(JPEG)"
+    
+    static let weather = "weather"
+    static let gif = "gif"
 }

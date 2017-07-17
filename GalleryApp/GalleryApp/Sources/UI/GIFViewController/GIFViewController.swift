@@ -1,0 +1,61 @@
+//
+//  GIFViewController.swift
+//  GalleryApp
+//
+//  Created by Bondar Pavel on 7/17/17.
+//  Copyright © 2017 Pavel Bondar. All rights reserved.
+//
+
+import UIKit
+import SwiftGifOrigin
+
+class GIFViewController: UIViewController, RootViewGettable {
+    typealias RootViewType = GIFView
+    
+    var slideInTransitioningDelegate = SlideInPresentationManager()
+    
+    var user: User?
+    var image: GalleryImage?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        setupTransition()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onCancel(_:)))
+        view.addGestureRecognizer(tapGesture)
+        
+        rootView?.contentView.loading = true
+        let context = GIFContext(user: user, success: { [weak self] (gifURLString) in
+            print(gifURLString)
+            if let gifURLString = gifURLString as? String {
+                self?.rootView?.GIFImageView.image = UIImage.gif(url: gifURLString)
+            }
+            
+            self?.rootView?.contentView.loading = false
+        }) { [weak self] in
+            self?.rootView?.contentView.loading = false
+        }
+        
+        context.execute()
+    }
+    
+    func setupTransition() {
+        slideInTransitioningDelegate.direction = .bottom
+        slideInTransitioningDelegate.size = .twoThirds
+        self.transitioningDelegate = slideInTransitioningDelegate
+        self.modalPresentationStyle = .custom
+    }
+    
+    func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+}

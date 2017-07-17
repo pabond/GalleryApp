@@ -48,7 +48,9 @@ class GalleryViewController: UIViewController, RootViewGettable {
     }
     
     func onPlay() {
-        
+        guard let controller = GIFViewController.viewController() as? GIFViewController else { return }
+        controller.user = self.user
+        self.present(controller, animated: true)
     }
     
     func onAdd() {

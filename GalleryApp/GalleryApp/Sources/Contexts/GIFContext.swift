@@ -1,36 +1,35 @@
 //
-//  AuthorisationContext.swift
+//  GIFContext.swift
 //  GalleryApp
 //
-//  Created by Bondar Pavel on 7/12/17.
+//  Created by Bondar Pavel on 7/17/17.
 //  Copyright © 2017 Pavel Bondar. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 
-class AuthorisationContext: Context {
-    internal var password: String!
-    internal var avatar: UIImage?
-    internal var userName: String?
-    internal var email: String!
+class GIFContext: Context {
+    override var httpMethod : HTTPMethod {
+        return .get
+    }
     
-    init(success: ((_ : Any)->())?,
-         fail: (()->())?,
-         user: User?,
-         password: String,
-         email: String,
-         avatar: UIImage? = nil,
-         userName: String? = nil)
-    {
-        super.init(user: user, success: success, fail: fail)
-        self.email = email
-        self.password = password
-        self.avatar = avatar
-        self.userName = userName
+    override var reqestTail: String {
+        return "/gif"
+    }
+    
+    override func fillMultipartFormData(_ multipartFormData: MultipartFormData) {
+         _ = self.user?.weather.map {
+            multipartFormData.append(NSKeyedArchiver.archivedData(withRootObject: $0), withName: Constants.weather)
+        }
+    }
+    
+    override var headers : HTTPHeaders? {
+        return self.user.map { [Constants.token : $0.token] }
     }
     
     override func processResponse(_ response: DataResponse<Any>) {
+        print(response)
         guard let wSelf = weakSelf(self) else { return }
         DispatchQueue.global().async {
             switch(response.result) {
@@ -38,7 +37,7 @@ class AuthorisationContext: Context {
                 guard let json = json as? Dictionary<String, Any> else { return }
                 (response.response?.statusCode).map {
                     if $0 == 400 || $0 == 401  {
-                        wSelf.callCompletion()
+                        wSelf.callCompletion(json[Constants.gif])
                     } else {
                         var user = self.user
                         (json[Constants.avatar] as? String).map { user?.avatarUrlString = $0 }

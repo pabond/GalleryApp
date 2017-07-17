@@ -8,6 +8,6 @@
 
 struct GalleryImage {
     let imageUrlString : String
-    let weather : String
-    let address : String
+    let discription : String
+    let tags : [String]
 }

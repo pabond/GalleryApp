@@ -52,9 +52,6 @@
 		2D17B61F1F151D0C00737C4F /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5ED1F151D0C00737C4F /* SlideInPresentationController.swift */; };
 		2D17B6201F151D0C00737C4F /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5EE1F151D0C00737C4F /* SlideInPresentationManager.swift */; };
 		2D17B6211F151D0C00737C4F /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5EF1F151D0C00737C4F /* SlideOutAnimationController.swift */; };
-		2D17B6221F151D0C00737C4F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5F01F151D0C00737C4F /* TableViewController.swift */; };
-		2D17B6231F151D0C00737C4F /* TrancitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5F11F151D0C00737C4F /* TrancitionViewController.swift */; };
-		2D17B6241F151D0C00737C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5F21F151D0C00737C4F /* ViewController.swift */; };
 		2D17B6251F151D0C00737C4F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5F41F151D0C00737C4F /* RoundedView.swift */; };
 		2D17B6261F151D0C00737C4F /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B5F51F151D0C00737C4F /* RoundView.swift */; };
 		2D17B6341F151E3600737C4F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17B6321F151E3600737C4F /* LoginViewController.swift */; };
@@ -81,6 +78,13 @@
 		2DA0506A1F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050691F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m */; };
 		2DA050711F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0506D1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m */; };
 		2DA050741F1CBED300E7EBC3 /* AllImagesContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050731F1CBED300E7EBC3 /* AllImagesContext.swift */; };
+		2DA050781F1CD20D00E7EBC3 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050761F1CD20D00E7EBC3 /* AddImageViewController.swift */; };
+		2DA050791F1CD20D00E7EBC3 /* AddImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA050771F1CD20D00E7EBC3 /* AddImageViewController.xib */; };
+		2DA0507E1F1CD23200E7EBC3 /* GIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0507C1F1CD23200E7EBC3 /* GIFViewController.swift */; };
+		2DA0507F1F1CD23200E7EBC3 /* GIFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA0507D1F1CD23200E7EBC3 /* GIFViewController.xib */; };
+		2DA050811F1CD24600E7EBC3 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050801F1CD24600E7EBC3 /* GIFView.swift */; };
+		2DA050831F1CD25700E7EBC3 /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050821F1CD25700E7EBC3 /* AddImageView.swift */; };
+		2DA050851F1CD6A000E7EBC3 /* GIFContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050841F1CD6A000E7EBC3 /* GIFContext.swift */; };
 		F09BC2EBF417B2268F1D91F4 /* Pods_GalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13852D582E17637951C8125 /* Pods_GalleryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,9 +138,6 @@
 		2D17B5ED1F151D0C00737C4F /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		2D17B5EE1F151D0C00737C4F /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		2D17B5EF1F151D0C00737C4F /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
-		2D17B5F01F151D0C00737C4F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		2D17B5F11F151D0C00737C4F /* TrancitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrancitionViewController.swift; sourceTree = "<group>"; };
-		2D17B5F21F151D0C00737C4F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D17B5F41F151D0C00737C4F /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		2D17B5F51F151D0C00737C4F /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		2D17B6321F151E3600737C4F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +169,13 @@
 		2DA0506C1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BPVExtensions.h"; sourceTree = "<group>"; };
 		2DA0506D1F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BPVExtensions.m"; sourceTree = "<group>"; };
 		2DA050731F1CBED300E7EBC3 /* AllImagesContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllImagesContext.swift; sourceTree = "<group>"; };
+		2DA050761F1CD20D00E7EBC3 /* AddImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
+		2DA050771F1CD20D00E7EBC3 /* AddImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageViewController.xib; sourceTree = "<group>"; };
+		2DA0507C1F1CD23200E7EBC3 /* GIFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFViewController.swift; sourceTree = "<group>"; };
+		2DA0507D1F1CD23200E7EBC3 /* GIFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFViewController.xib; sourceTree = "<group>"; };
+		2DA050801F1CD24600E7EBC3 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		2DA050821F1CD25700E7EBC3 /* AddImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
+		2DA050841F1CD6A000E7EBC3 /* GIFContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFContext.swift; sourceTree = "<group>"; };
 		318E3A903BBA98F80321EC8A /* Pods-GalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.release.xcconfig"; sourceTree = "<group>"; };
 		CAE5B27531AE4DFC71879050 /* Pods-GalleryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E13852D582E17637951C8125 /* Pods_GalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,9 +404,6 @@
 			isa = PBXGroup;
 			children = (
 				2D17B5EB1F151D0C00737C4F /* SlideInPresentationController */,
-				2D17B5F01F151D0C00737C4F /* TableViewController.swift */,
-				2D17B5F11F151D0C00737C4F /* TrancitionViewController.swift */,
-				2D17B5F21F151D0C00737C4F /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -478,6 +483,9 @@
 		2D17B62F1F151E3600737C4F /* GIFViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2DA0507C1F1CD23200E7EBC3 /* GIFViewController.swift */,
+				2DA0507D1F1CD23200E7EBC3 /* GIFViewController.xib */,
+				2DA050801F1CD24600E7EBC3 /* GIFView.swift */,
 			);
 			path = GIFViewController;
 			sourceTree = "<group>";
@@ -506,6 +514,7 @@
 				2D17B64F1F1691C100737C4F /* Context.swift */,
 				2D717D6D1F1BD49200848F1A /* AuthorisationContext */,
 				2DA050731F1CBED300E7EBC3 /* AllImagesContext.swift */,
+				2DA050841F1CD6A000E7EBC3 /* GIFContext.swift */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -560,6 +569,9 @@
 		2DA050751F1CD08D00E7EBC3 /* AddImageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2DA050761F1CD20D00E7EBC3 /* AddImageViewController.swift */,
+				2DA050771F1CD20D00E7EBC3 /* AddImageViewController.xib */,
+				2DA050821F1CD25700E7EBC3 /* AddImageView.swift */,
 			);
 			path = AddImageViewController;
 			sourceTree = "<group>";
@@ -647,6 +659,8 @@
 				2D17B6351F151E3600737C4F /* LoginViewController.xib in Resources */,
 				2D17B64E1F1689AE00737C4F /* GalleryViewController.xib in Resources */,
 				2DA050601F1CB7B500E7EBC3 /* BPVLoadingView.xib in Resources */,
+				2DA0507F1F1CD23200E7EBC3 /* GIFViewController.xib in Resources */,
+				2DA050791F1CD20D00E7EBC3 /* AddImageViewController.xib in Resources */,
 				2D17B5AA1F151A5C00737C4F /* LaunchScreen.storyboard in Resources */,
 				2D17B5A71F151A5C00737C4F /* Assets.xcassets in Resources */,
 				2DA050551F1BE9A600E7EBC3 /* GalleryImageCell.xib in Resources */,
@@ -720,6 +734,7 @@
 				2D17B6031F151D0C00737C4F /* UINib.swift in Sources */,
 				2D717D711F1BD49200848F1A /* AuthorisationContext.swift in Sources */,
 				2D17B6261F151D0C00737C4F /* RoundView.swift in Sources */,
+				2DA050831F1CD25700E7EBC3 /* AddImageView.swift in Sources */,
 				2D17B6251F151D0C00737C4F /* RoundedView.swift in Sources */,
 				2D17B63D1F15328400737C4F /* Email.swift in Sources */,
 				2D17B6041F151D0C00737C4F /* UITableView.swift in Sources */,
@@ -729,10 +744,10 @@
 				2D17B6051F151D0C00737C4F /* UIViewController+AddRemoveChild.swift in Sources */,
 				2D17B60C1F151D0C00737C4F /* AddModel + UICollectionView.swift in Sources */,
 				2DA050611F1CB7B500E7EBC3 /* BPVView.m in Sources */,
-				2D17B6231F151D0C00737C4F /* TrancitionViewController.swift in Sources */,
 				2D17B61E1F151D0C00737C4F /* SlideInPresentationAnimator.swift in Sources */,
 				2D17B60F1F151D0C00737C4F /* MoveModel + UICollectionView.swift in Sources */,
 				2D17B5FB1F151D0C00737C4F /* Enum + Extensions.swift in Sources */,
+				2DA0507E1F1CD23200E7EBC3 /* GIFViewController.swift in Sources */,
 				2D17B61A1F151D0C00737C4F /* ArrayModel.swift in Sources */,
 				2DA050711F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m in Sources */,
 				2D17B5A01F151A5C00737C4F /* AppDelegate.swift in Sources */,
@@ -749,14 +764,16 @@
 				2D17B6501F1691C100737C4F /* Context.swift in Sources */,
 				2D17B6071F151D0C00737C4F /* UIWindow.swift in Sources */,
 				2D17B5F91F151D0C00737C4F /* Array.swift in Sources */,
+				2DA050811F1CD24600E7EBC3 /* GIFView.swift in Sources */,
 				2D17B6341F151E3600737C4F /* LoginViewController.swift in Sources */,
 				2D17B6131F151D0C00737C4F /* RemoveModel + UITableView.swift in Sources */,
 				2D17B6151F151D0C00737C4F /* UpdateModel + UICollectionView.swift in Sources */,
+				2DA050781F1CD20D00E7EBC3 /* AddImageViewController.swift in Sources */,
 				2D17B60D1F151D0C00737C4F /* AddModel + UITableView.swift in Sources */,
-				2D17B6241F151D0C00737C4F /* ViewController.swift in Sources */,
 				2D717D721F1BD49200848F1A /* LoginContext.swift in Sources */,
 				2D17B6081F151D0C00737C4F /* Functions.swift in Sources */,
 				2DA0505F1F1CB7B500E7EBC3 /* BPVLoadingView.m in Sources */,
+				2DA050851F1CD6A000E7EBC3 /* GIFContext.swift in Sources */,
 				2D17B6091F151D0C00737C4F /* ArrayChange + UICollectionView.swift in Sources */,
 				2D17B6021F151D0C00737C4F /* UINavigationController.swift in Sources */,
 				2D17B5F81F151D0C00737C4F /* Lock.swift in Sources */,
@@ -774,7 +791,6 @@
 				2D17B61B1F151D0C00737C4F /* Model.swift in Sources */,
 				2D17B6011F151D0C00737C4F /* UIImageView + KingfisherLoad.swift in Sources */,
 				2D17B64A1F155E8E00737C4F /* UIImage.swift in Sources */,
-				2D17B6221F151D0C00737C4F /* TableViewController.swift in Sources */,
 				2D17B5F71F151D0C00737C4F /* BPVMacro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
