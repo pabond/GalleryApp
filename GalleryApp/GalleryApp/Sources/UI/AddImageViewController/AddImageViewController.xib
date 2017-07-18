@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +18,66 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="AddImageView" customModule="GalleryApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="fLo-vX-Kdo">
+                    <rect key="frame" x="20" y="30" width="335" height="222.5"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bjm-fA-nBh">
+                    <rect key="frame" x="20" y="302.5" width="335" height="17"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5h-wy-ir2">
+                    <rect key="frame" x="15" y="320.5" width="345" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="lTp-ML-3L8"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="sqB-Pv-rnL"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="#hashtag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zi4-Mf-OE8">
+                    <rect key="frame" x="20" y="351.5" width="335" height="17"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQj-pP-Mh4">
+                    <rect key="frame" x="15" y="369.5" width="345" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="2Al-AS-SMp"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="L5h-wy-ir2" secondAttribute="trailing" constant="15" id="8dO-bd-7TI"/>
+                <constraint firstItem="Bjm-fA-nBh" firstAttribute="trailing" secondItem="fLo-vX-Kdo" secondAttribute="trailing" id="8xs-tG-GOM"/>
+                <constraint firstItem="L5h-wy-ir2" firstAttribute="top" secondItem="Bjm-fA-nBh" secondAttribute="bottom" constant="1" id="C5o-Yb-2c6"/>
+                <constraint firstAttribute="trailing" secondItem="fLo-vX-Kdo" secondAttribute="trailing" constant="20" id="CAq-N6-Drt"/>
+                <constraint firstItem="Bjm-fA-nBh" firstAttribute="leading" secondItem="fLo-vX-Kdo" secondAttribute="leading" id="Cga-BD-rIH"/>
+                <constraint firstItem="fLo-vX-Kdo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Ekk-s5-8ZT"/>
+                <constraint firstItem="fLo-vX-Kdo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/3" id="MEu-84-BTa"/>
+                <constraint firstItem="DQj-pP-Mh4" firstAttribute="top" secondItem="Zi4-Mf-OE8" secondAttribute="bottom" constant="1" id="RWU-an-zPG"/>
+                <constraint firstItem="Zi4-Mf-OE8" firstAttribute="trailing" secondItem="Bjm-fA-nBh" secondAttribute="trailing" id="SW0-r1-g4b"/>
+                <constraint firstItem="fLo-vX-Kdo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="SyT-wh-9bg"/>
+                <constraint firstItem="DQj-pP-Mh4" firstAttribute="leading" secondItem="L5h-wy-ir2" secondAttribute="leading" id="UOi-vF-ioW"/>
+                <constraint firstItem="Zi4-Mf-OE8" firstAttribute="top" secondItem="L5h-wy-ir2" secondAttribute="bottom" constant="30" id="WTx-e9-IVn"/>
+                <constraint firstItem="Bjm-fA-nBh" firstAttribute="top" secondItem="fLo-vX-Kdo" secondAttribute="bottom" constant="50" id="jhf-cW-WsE"/>
+                <constraint firstItem="L5h-wy-ir2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="kyB-Ep-BZU"/>
+                <constraint firstItem="DQj-pP-Mh4" firstAttribute="trailing" secondItem="L5h-wy-ir2" secondAttribute="trailing" id="pgF-kt-dnp"/>
+                <constraint firstItem="Zi4-Mf-OE8" firstAttribute="leading" secondItem="Bjm-fA-nBh" secondAttribute="leading" id="t91-8T-hCY"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionTextField" destination="Bjm-fA-nBh" id="xfr-j9-PEZ"/>
+                <outlet property="hashTagTextField" destination="Zi4-Mf-OE8" id="VAL-cz-wpk"/>
+                <outlet property="imageView" destination="fLo-vX-Kdo" id="Dmd-Kd-2tH"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="56.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="DefaultImage" width="64" height="64"/>
+    </resources>
 </document>

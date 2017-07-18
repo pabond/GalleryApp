@@ -26,6 +26,27 @@ class GalleryViewController: UIViewController, RootViewGettable {
         loadImages()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    
+    }
+    
+    func onLogout() {
+        navigationController?.dismiss(animated: true)
+    }
+    
+    func onPlay() {
+        guard let controller = GIFViewController.viewController() as? GIFViewController else { return }
+        controller.user = self.user
+        self.present(controller, animated: true)
+    }
+    
+    func onAdd() {
+        guard let controller = AddImageViewController.viewController() as? AddImageViewController else { return }
+        controller.user = self.user
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     private func loadImages() {
         rootView?.loading = true
         let context = AllImagesContext(user: self.user, success: { [weak self] (user) in
@@ -38,39 +59,20 @@ class GalleryViewController: UIViewController, RootViewGettable {
         context.execute()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    
-    }
-    
-    func onLogout() {
-        
-    }
-    
-    func onPlay() {
-        guard let controller = GIFViewController.viewController() as? GIFViewController else { return }
-        controller.user = self.user
-        self.present(controller, animated: true)
-    }
-    
-    func onAdd() {
-        
-    }
-    
     private func addBurButtons() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Logout"), style: .plain, target: self, action: #selector(onLogout))
         addRigthButtons()
     }
     
     private func addRigthButtons() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "PlayGIF"),
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "AddImage"),
                                                             style: .plain,
                                                             target: self,
-                                                            action: #selector(onPlay))
-        navigationItem.rightBarButtonItems?.append(UIBarButtonItem(image: #imageLiteral(resourceName: "AddImage"),
+                                                            action: #selector(onAdd))
+        navigationItem.rightBarButtonItems?.append(UIBarButtonItem(image: #imageLiteral(resourceName: "PlayGIF"),
                                                                    style: .plain,
                                                                    target: self,
-                                                                   action: #selector(onAdd)))
+                                                                   action: #selector(onPlay)))
     }
 }
 

@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="192" height="237"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ofh-q3-3Uq">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ofh-q3-3Uq">
                         <rect key="frame" x="0.0" y="0.0" width="192" height="192"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ce-DP-HyC">
@@ -56,4 +56,7 @@
             <point key="canvasLocation" x="105" y="149.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="DefaultImage" width="64" height="64"/>
+    </resources>
 </document>

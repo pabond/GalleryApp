@@ -9,5 +9,8 @@
 import UIKit
 
 class AddImageView: BPVView {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var hashTagTextField: UITextField!
 
 }
