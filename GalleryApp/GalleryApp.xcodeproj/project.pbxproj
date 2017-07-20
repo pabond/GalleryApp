@@ -69,8 +69,6 @@
 		2D717D721F1BD49200848F1A /* LoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D717D6F1F1BD49200848F1A /* LoginContext.swift */; };
 		2D717D731F1BD49200848F1A /* SignUpContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D717D701F1BD49200848F1A /* SignUpContext.swift */; };
 		2DA050511F1BE95200E7EBC3 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050501F1BE95200E7EBC3 /* GalleryView.swift */; };
-		2DA050541F1BE9A600E7EBC3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050521F1BE9A600E7EBC3 /* CollectionViewCell.swift */; };
-		2DA050551F1BE9A600E7EBC3 /* GalleryImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA050531F1BE9A600E7EBC3 /* GalleryImageCell.xib */; };
 		2DA050571F1BEFB500E7EBC3 /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050561F1BEFB500E7EBC3 /* GalleryImage.swift */; };
 		2DA0505F1F1CB7B500E7EBC3 /* BPVLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0505A1F1CB7B500E7EBC3 /* BPVLoadingView.m */; };
 		2DA050601F1CB7B500E7EBC3 /* BPVLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA0505B1F1CB7B500E7EBC3 /* BPVLoadingView.xib */; };
@@ -85,6 +83,12 @@
 		2DA050811F1CD24600E7EBC3 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050801F1CD24600E7EBC3 /* GIFView.swift */; };
 		2DA050831F1CD25700E7EBC3 /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050821F1CD25700E7EBC3 /* AddImageView.swift */; };
 		2DA050851F1CD6A000E7EBC3 /* GIFContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050841F1CD6A000E7EBC3 /* GIFContext.swift */; };
+		2DA0508C1F1E984600E7EBC3 /* AddImageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0508B1F1E984600E7EBC3 /* AddImageContext.swift */; };
+		2DA0508E1F1F6C9000E7EBC3 /* NewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0508D1F1F6C9000E7EBC3 /* NewImage.swift */; };
+		2DA050901F1F742E00E7EBC3 /* DataConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0508F1F1F742E00E7EBC3 /* DataConvertable.swift */; };
+		2DA050941F20A8DA00E7EBC3 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050931F20A8DA00E7EBC3 /* Optional.swift */; };
+		2DA050971F20BFB800E7EBC3 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA050951F20BFB800E7EBC3 /* GalleryCell.swift */; };
+		2DA050981F20BFB800E7EBC3 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA050961F20BFB800E7EBC3 /* GalleryCell.xib */; };
 		F09BC2EBF417B2268F1D91F4 /* Pods_GalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13852D582E17637951C8125 /* Pods_GalleryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,8 +159,6 @@
 		2D717D6F1F1BD49200848F1A /* LoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContext.swift; sourceTree = "<group>"; };
 		2D717D701F1BD49200848F1A /* SignUpContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpContext.swift; sourceTree = "<group>"; };
 		2DA050501F1BE95200E7EBC3 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		2DA050521F1BE9A600E7EBC3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		2DA050531F1BE9A600E7EBC3 /* GalleryImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryImageCell.xib; sourceTree = "<group>"; };
 		2DA050561F1BEFB500E7EBC3 /* GalleryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
 		2DA050591F1CB7B500E7EBC3 /* BPVLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPVLoadingView.h; sourceTree = "<group>"; };
 		2DA0505A1F1CB7B500E7EBC3 /* BPVLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPVLoadingView.m; sourceTree = "<group>"; };
@@ -176,6 +178,12 @@
 		2DA050801F1CD24600E7EBC3 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 		2DA050821F1CD25700E7EBC3 /* AddImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
 		2DA050841F1CD6A000E7EBC3 /* GIFContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFContext.swift; sourceTree = "<group>"; };
+		2DA0508B1F1E984600E7EBC3 /* AddImageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageContext.swift; sourceTree = "<group>"; };
+		2DA0508D1F1F6C9000E7EBC3 /* NewImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewImage.swift; sourceTree = "<group>"; };
+		2DA0508F1F1F742E00E7EBC3 /* DataConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConvertable.swift; sourceTree = "<group>"; };
+		2DA050931F20A8DA00E7EBC3 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		2DA050951F20BFB800E7EBC3 /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		2DA050961F20BFB800E7EBC3 /* GalleryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		318E3A903BBA98F80321EC8A /* Pods-GalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.release.xcconfig"; sourceTree = "<group>"; };
 		CAE5B27531AE4DFC71879050 /* Pods-GalleryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GalleryApp/Pods-GalleryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E13852D582E17637951C8125 /* Pods_GalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +288,7 @@
 				2D17B5C81F151D0C00737C4F /* UIWindow.swift */,
 				2D17B6431F1542A900737C4F /* URRRequest.swift */,
 				2D17B6491F155E8E00737C4F /* UIImage.swift */,
+				2DA050931F20A8DA00E7EBC3 /* Optional.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +405,7 @@
 			children = (
 				2D17B5E81F151D0C00737C4F /* RootViewGettable.swift */,
 				2D17B5E91F151D0C00737C4F /* Weakable.swift */,
+				2DA0508F1F1F742E00E7EBC3 /* DataConvertable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -445,6 +455,7 @@
 			children = (
 				2D17B6391F152E5800737C4F /* User.swift */,
 				2DA050561F1BEFB500E7EBC3 /* GalleryImage.swift */,
+				2DA0508D1F1F6C9000E7EBC3 /* NewImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,8 +485,8 @@
 		2D17B62E1F151E3600737C4F /* GalleryImageCell */ = {
 			isa = PBXGroup;
 			children = (
-				2DA050521F1BE9A600E7EBC3 /* CollectionViewCell.swift */,
-				2DA050531F1BE9A600E7EBC3 /* GalleryImageCell.xib */,
+				2DA050951F20BFB800E7EBC3 /* GalleryCell.swift */,
+				2DA050961F20BFB800E7EBC3 /* GalleryCell.xib */,
 			);
 			path = GalleryImageCell;
 			sourceTree = "<group>";
@@ -514,6 +525,7 @@
 				2D17B64F1F1691C100737C4F /* Context.swift */,
 				2D717D6D1F1BD49200848F1A /* AuthorisationContext */,
 				2DA050731F1CBED300E7EBC3 /* AllImagesContext.swift */,
+				2DA0508B1F1E984600E7EBC3 /* AddImageContext.swift */,
 				2DA050841F1CD6A000E7EBC3 /* GIFContext.swift */,
 			);
 			path = Contexts;
@@ -657,13 +669,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D17B6351F151E3600737C4F /* LoginViewController.xib in Resources */,
+				2DA050981F20BFB800E7EBC3 /* GalleryCell.xib in Resources */,
 				2D17B64E1F1689AE00737C4F /* GalleryViewController.xib in Resources */,
 				2DA050601F1CB7B500E7EBC3 /* BPVLoadingView.xib in Resources */,
 				2DA0507F1F1CD23200E7EBC3 /* GIFViewController.xib in Resources */,
 				2DA050791F1CD20D00E7EBC3 /* AddImageViewController.xib in Resources */,
 				2D17B5AA1F151A5C00737C4F /* LaunchScreen.storyboard in Resources */,
 				2D17B5A71F151A5C00737C4F /* Assets.xcassets in Resources */,
-				2DA050551F1BE9A600E7EBC3 /* GalleryImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,14 +743,15 @@
 				2D17B6191F151D0C00737C4F /* TwoIndexArrayChange.swift in Sources */,
 				2D17B60B1F151D0C00737C4F /* ArrayChange.swift in Sources */,
 				2D17B6141F151D0C00737C4F /* RemoveModel.swift in Sources */,
+				2DA0508C1F1E984600E7EBC3 /* AddImageContext.swift in Sources */,
 				2D17B6031F151D0C00737C4F /* UINib.swift in Sources */,
+				2DA050941F20A8DA00E7EBC3 /* Optional.swift in Sources */,
 				2D717D711F1BD49200848F1A /* AuthorisationContext.swift in Sources */,
 				2D17B6261F151D0C00737C4F /* RoundView.swift in Sources */,
 				2DA050831F1CD25700E7EBC3 /* AddImageView.swift in Sources */,
 				2D17B6251F151D0C00737C4F /* RoundedView.swift in Sources */,
 				2D17B63D1F15328400737C4F /* Email.swift in Sources */,
 				2D17B6041F151D0C00737C4F /* UITableView.swift in Sources */,
-				2DA050541F1BE9A600E7EBC3 /* CollectionViewCell.swift in Sources */,
 				2D17B6111F151D0C00737C4F /* MoveModel.swift in Sources */,
 				2D17B61F1F151D0C00737C4F /* SlideInPresentationController.swift in Sources */,
 				2D17B6051F151D0C00737C4F /* UIViewController+AddRemoveChild.swift in Sources */,
@@ -748,6 +761,7 @@
 				2D17B60F1F151D0C00737C4F /* MoveModel + UICollectionView.swift in Sources */,
 				2D17B5FB1F151D0C00737C4F /* Enum + Extensions.swift in Sources */,
 				2DA0507E1F1CD23200E7EBC3 /* GIFViewController.swift in Sources */,
+				2DA050901F1F742E00E7EBC3 /* DataConvertable.swift in Sources */,
 				2D17B61A1F151D0C00737C4F /* ArrayModel.swift in Sources */,
 				2DA050711F1CBD8B00E7EBC3 /* NSArray+BPVExtensions.m in Sources */,
 				2D17B5A01F151A5C00737C4F /* AppDelegate.swift in Sources */,
@@ -755,6 +769,7 @@
 				2D17B6211F151D0C00737C4F /* SlideOutAnimationController.swift in Sources */,
 				2D17B6181F151D0C00737C4F /* OneIndexArrayChange.swift in Sources */,
 				2DA0506A1F1CBD0200E7EBC3 /* NSBundle+BPVExtensions.m in Sources */,
+				2DA050971F20BFB800E7EBC3 /* GalleryCell.swift in Sources */,
 				2D17B6061F151D0C00737C4F /* UIViewController.swift in Sources */,
 				2D17B6171F151D0C00737C4F /* UpdateModel.swift in Sources */,
 				2D17B6381F152A5500737C4F /* LoginView.swift in Sources */,
@@ -767,6 +782,7 @@
 				2DA050811F1CD24600E7EBC3 /* GIFView.swift in Sources */,
 				2D17B6341F151E3600737C4F /* LoginViewController.swift in Sources */,
 				2D17B6131F151D0C00737C4F /* RemoveModel + UITableView.swift in Sources */,
+				2DA0508E1F1F6C9000E7EBC3 /* NewImage.swift in Sources */,
 				2D17B6151F151D0C00737C4F /* UpdateModel + UICollectionView.swift in Sources */,
 				2DA050781F1CD20D00E7EBC3 /* AddImageViewController.swift in Sources */,
 				2D17B60D1F151D0C00737C4F /* AddModel + UITableView.swift in Sources */,

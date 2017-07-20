@@ -11,4 +11,9 @@ import UIKit
 class GalleryView: BPVView {
     @IBOutlet weak var collectionView: UICollectionView?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        collectionView?.registerCell(withClass: GalleryCell.self)
+    }
 }

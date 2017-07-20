@@ -17,7 +17,7 @@ class SignUpContext: LoginContext {
     
     override func fillMultipartFormData(_ multipartFormData: MultipartFormData) {
         super.fillMultipartFormData(multipartFormData)
-        self.userName?.data(using: String.Encoding.utf8).map { multipartFormData.append($0, withName: Constants.username) }
+        self.userName?.utf8Encoded.map { multipartFormData.append($0, withName: Constants.username) }
         self.avatar
             .flatMap { UIImageJPEGRepresentation($0, 0.1) }
             .map { multipartFormData.append($0,

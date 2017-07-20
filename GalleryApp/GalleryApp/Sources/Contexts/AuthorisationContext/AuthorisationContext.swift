@@ -40,10 +40,10 @@ class AuthorisationContext: Context {
                     if $0 == 400 || $0 == 401  {
                         wSelf.callCompletion()
                     } else {
-                        var user = self.user
-                        (json[Constants.avatar] as? String).map { user?.avatarUrlString = $0 }
-                        (json[Constants.creationTime] as? String).map { user?.creationTime = $0 }
-                        (json[Constants.token] as? String).map { user?.token = $0 }
+                        let user = wSelf.user
+                        (json[Constants.avatar].string).map { user?.avatarUrlString = $0 }
+                        (json[Constants.creationTime].string).map { user?.creationTime = $0 }
+                        (json[Constants.token].string).map { user?.token = $0 }
                         wSelf.callCompletion(user)
                     }
                 }

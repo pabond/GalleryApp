@@ -16,7 +16,7 @@ class LoginContext: AuthorisationContext {
     }
     
     override func fillMultipartFormData(_ multipartFormData: MultipartFormData) {
-        self.email.data(using: String.Encoding.utf8).map { multipartFormData.append($0, withName: Constants.email) }
-        self.password.data(using: String.Encoding.utf8).map { multipartFormData.append($0, withName: Constants.password) }
+        self.email.utf8Encoded.map { multipartFormData.append($0, withName: Constants.email) }
+        self.password.utf8Encoded.map { multipartFormData.append($0, withName: Constants.password) }
     }
 }

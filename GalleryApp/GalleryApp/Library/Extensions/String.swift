@@ -10,6 +10,10 @@ import Foundation
 
 extension String {
     
+    var utf8Encoded : Data? {
+        return self.data(using: String.Encoding.utf8)
+    }
+    
     var idp_localized: String {
         return NSLocalizedString(self, comment: self)
     }

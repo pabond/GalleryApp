@@ -19,16 +19,20 @@ class GalleryViewController: UIViewController, RootViewGettable {
         return user?.images
     }
     
+    private var refreshControl: UIRefreshControl?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addBurButtons()
         loadImages()
+        setUpRefresh()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     
+        rootView?.collectionView?.reloadData()
     }
     
     func onLogout() {
@@ -47,7 +51,7 @@ class GalleryViewController: UIViewController, RootViewGettable {
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    private func loadImages() {
+    func loadImages() {
         rootView?.loading = true
         let context = AllImagesContext(user: self.user, success: { [weak self] (user) in
             self?.rootView?.collectionView?.reloadData()
@@ -74,6 +78,12 @@ class GalleryViewController: UIViewController, RootViewGettable {
                                                                    target: self,
                                                                    action: #selector(onPlay)))
     }
+    
+    private func setUpRefresh() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadImages), for: .valueChanged)
+        refreshControl.map { rootView?.collectionView?.addSubview($0) }
+    }
 }
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -83,7 +93,7 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCellWithClass(GalleryImageCell.self, for: indexPath)
+        let cell = collectionView.dequeueCellWithClass(GalleryCell.self, for: indexPath)
         let object = images?[indexPath.row]
         cell.fillWith(object)
         
@@ -103,7 +113,7 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         let height = collectionView.frame.width / cellsPerRow
-        let width = height - inset
+        let width = height - inset * 3
         
         return CGSize(width: width, height: height)
     }
@@ -120,6 +130,14 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
     {
         return inset
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
     }
 }
 
