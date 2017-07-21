@@ -27,6 +27,9 @@ class GIFViewController: UIViewController, RootViewGettable {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: -
+    //MARK: View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +37,27 @@ class GIFViewController: UIViewController, RootViewGettable {
         view.addGestureRecognizer(tapGesture)
         
         rootView?.contentView.loading = true
+        loadGIF()
+    }
+    
+    func setupTransition() {
+        slideInTransitioningDelegate.direction = .bottom
+        slideInTransitioningDelegate.size = .twoThirds
+        self.transitioningDelegate = slideInTransitioningDelegate
+        self.modalPresentationStyle = .custom
+    }
+    
+    //MARK: -
+    //MARK: Interface Handling
+    
+    func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: -
+    //MARK: Private functions
+    
+    private func loadGIF() {
         let context = GIFContext(user: user, success: { [weak self] (gifURLString) in
             print(gifURLString)
             if let gifURLString = gifURLString as? String {
@@ -47,16 +71,5 @@ class GIFViewController: UIViewController, RootViewGettable {
         }
         
         context.execute()
-    }
-    
-    func setupTransition() {
-        slideInTransitioningDelegate.direction = .bottom
-        slideInTransitioningDelegate.size = .twoThirds
-        self.transitioningDelegate = slideInTransitioningDelegate
-        self.modalPresentationStyle = .custom
-    }
-    
-    func onCancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
 }

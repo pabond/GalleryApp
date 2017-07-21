@@ -21,6 +21,9 @@ class GalleryViewController: UIViewController, RootViewGettable {
     
     private var refreshControl: UIRefreshControl?
     
+    //MARK: -
+    //MARK: View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +37,9 @@ class GalleryViewController: UIViewController, RootViewGettable {
     
         rootView?.collectionView?.reloadData()
     }
+    
+    //MARK: -
+    //MARK: Interface Handling
     
     func onLogout() {
         navigationController?.dismiss(animated: true)
@@ -74,6 +80,9 @@ class GalleryViewController: UIViewController, RootViewGettable {
         
         context.execute()
     }
+    
+    //MARK: -
+    //MARK: Private methods
     
     private func addBurButtons() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Logout"), style: .plain, target: self, action: #selector(onLogout))

@@ -22,6 +22,9 @@ class AddImageViewController: UIViewController, RootViewGettable {
         }
     }
     
+    //MARK: -
+    //MARK: View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +38,9 @@ class AddImageViewController: UIViewController, RootViewGettable {
         
         addBurButton()
     }
+    
+    //MARK: -
+    //MARK: Interface Handling
 
     @IBAction func onImage(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -72,6 +78,9 @@ class AddImageViewController: UIViewController, RootViewGettable {
         }
     }
     
+    //MARK: -
+    //MARK: Private methods
+    
     private func addBurButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "OK"),
                                                             style: .plain,
@@ -79,6 +88,9 @@ class AddImageViewController: UIViewController, RootViewGettable {
                                                             action: #selector(onDone(_:)))
     }
 }
+
+//MARK: -
+//MARK: UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 extension AddImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

@@ -12,10 +12,8 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
     
     typealias RootViewType = LoginView
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    //MARK: -
+    //MARK: Interface Handling
 
     @IBAction func onSend(_ sender: Any) {
         if let email = emailValidation(), let password = passwordValidation(), let wSelf = weakSelf(self) {
@@ -37,6 +35,9 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
             self.present(imagePicker, animated: true)
         }
     }
+    
+    //MARK: -
+    //MARK: Private methods
     
     private func loginSuccess(_ user : Any) {
         guard let galleryController = GalleryViewController.viewController() as? GalleryViewController,
@@ -90,8 +91,10 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
         
         return password
     }
-
 }
+
+//MARK: -
+//MARK: UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 extension LoginViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
