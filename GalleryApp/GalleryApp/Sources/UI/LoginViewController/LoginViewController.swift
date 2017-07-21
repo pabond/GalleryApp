@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
         present(navController, animated: true)
     }
     
-    private func loginFailed() {
+    private func loginFailed(_ : Int?) {
         if let email = emailValidation(), let password = passwordValidation(), let image = avatarValidateion() {
             let signUpContext = SignUpContext(success: loginSuccess,
                                               fail: singUpFailed,
@@ -55,11 +55,12 @@ class LoginViewController: UIViewController, RootViewGettable, Weakable {
                                               email: email,
                                               avatar: image,
                                               userName: rootView?.userNameTextField.text)
+            
             signUpContext.execute()
         }
     }
     
-    private func singUpFailed() {
+    private func singUpFailed(_ : Int?) {
         infoAlert(title: "Failed", text: "Please check your internet connection")
     }
         

@@ -41,8 +41,9 @@ class GIFViewController: UIViewController, RootViewGettable {
             }
             
             self?.rootView?.contentView.loading = false
-        }) { [weak self] in
+        }) { [weak self] (value) in
             self?.rootView?.contentView.loading = false
+            self?.onCancel(false)
         }
         
         context.execute()

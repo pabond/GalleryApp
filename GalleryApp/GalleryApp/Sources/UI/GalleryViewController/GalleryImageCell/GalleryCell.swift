@@ -23,8 +23,12 @@ class GalleryCell: UICollectionViewCell {
         guard let imageModel = object else { return }
         weatherLabel.text = imageModel.weather
         addressLabel.text = imageModel.address
-        URL(string: imageModel.imageUrlString).map {
-            imageView.image(withURL: $0)
+        if let url = URL(string: imageModel.imageUrlString) {
+            imageView.image(withURL: url)
+        }
+        
+        if self.imageView.image == nil, let url = URL(string: imageModel.smallImageUrlString) {
+            imageView.image(withURL: url)
         }
     }
     

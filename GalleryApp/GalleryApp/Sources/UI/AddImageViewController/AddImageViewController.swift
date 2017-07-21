@@ -13,6 +13,7 @@ import AssetsLibrary
 class AddImageViewController: UIViewController, RootViewGettable {
     typealias RootViewType = AddImageView
     var user : User?
+    var imageAdded : (()->())?
     
     fileprivate var image : NewImage?
     fileprivate var pickedImage : UIImage? {
@@ -45,23 +46,29 @@ class AddImageViewController: UIViewController, RootViewGettable {
     }
     
     func onDone(_ sender : Any) {
+        self.rootView?.loading = true
         if var image = image {
             self.rootView?.descriptionTextField.text.map { image.description = $0 }
             self.rootView?.hashTagTextField.text.map { image.hashTags = $0 }
             let context = AddImageContext(user: user,
                                           success: { [weak self] (obj) in
-                                            self?.navigationController?.popViewControllerWithHandler(completion: {
-                                                self?.infoAlert(title: "Success", text: "Image successfully uploaded")
-                                            })
+                                            self?.rootView?.loading = false
+                                            self?.imageAdded?()
+                                            self?.popCurrentViewController()
                                         },
-                                          fail: { [weak self] in
+                                          fail: { [weak self] (value) in
+                                            if value == 403 {
+                                                self?.navigationController?.dismiss(animated: true)
+                                            }
+                                            
+                                            self?.rootView?.loading = false
                                             self?.infoAlert(title: "Fail", text: "Failed to upload image")
                                         },
                                           image: image)
             
             context.execute()
         } else {
-            infoAlert(title: "Image not selected", text: "Please select image to upload")
+            infoAlert(title: "Image invalid", text: "Please select valid image to upload")
         }
     }
     
@@ -74,26 +81,34 @@ class AddImageViewController: UIViewController, RootViewGettable {
 }
 
 extension AddImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        info[UIImagePickerControllerOriginalImage]
-            .flatMap { $0 as? UIImage }
-            .map { self.pickedImage = $0 }
+        let image = info[UIImagePickerControllerOriginalImage].flatMap { $0 as? UIImage }
         
+        if let image = image {
+            if image.size.width * image.scale < 600 {
+                picker.infoAlert(title: "Image size is to small", text: "Please select another image. ")
+                
+                return
+            } else {
+                self.pickedImage = image
+            }
+        }
+    
         if let URL = info[UIImagePickerControllerReferenceURL] as? URL {
             let opts = PHFetchOptions()
             opts.fetchLimit = 1
             let asset = PHAsset.fetchAssets(withALAssetURLs: [URL], options: opts).firstObject
-            if let location = asset?.location {
-                let latitude = location.coordinate.latitude
-                let longitude = location.coordinate.longitude
+            let location = asset?.location
+            let latitude = (location?.coordinate.latitude).map { Float($0) } ?? 0
+            let longitude = (location?.coordinate.longitude).map { Float($0) } ?? 0
                 
-                self.image = self.pickedImage.map {
-                    NewImage(image: $0,
-                             longitude: Float(longitude),
-                             latitude: Float(latitude),
-                             description: "",
-                             hashTags: "")
-                }
+            self.image = image.map {
+                NewImage(image: $0,
+                        longitude: longitude,
+                        latitude: latitude,
+                        description: "",
+                        hashTags: "")
             }
         }
         

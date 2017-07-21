@@ -20,10 +20,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxq-xW-AIb" customClass="BPVView">
-                    <rect key="frame" x="10" y="222" width="355" height="222"/>
+                    <rect key="frame" x="10" y="166.5" width="355" height="333.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHX-PT-5f8">
-                            <rect key="frame" x="0.0" y="0.0" width="355" height="222"/>
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="333.5"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.86774270304568524" green="0.86774270304568524" blue="0.86774270304568524" alpha="0.75064212328767121" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,7 +39,7 @@
             <constraints>
                 <constraint firstItem="Wxq-xW-AIb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="B8u-sM-J0u"/>
                 <constraint firstItem="Wxq-xW-AIb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Pog-go-p1l"/>
-                <constraint firstItem="hHX-PT-5f8" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/3" id="WdB-6n-5c5"/>
+                <constraint firstItem="hHX-PT-5f8" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/2" id="WdB-6n-5c5"/>
                 <constraint firstAttribute="trailing" secondItem="Wxq-xW-AIb" secondAttribute="trailing" constant="10" id="XXU-1e-an3"/>
                 <constraint firstItem="Wxq-xW-AIb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="eVI-Yn-UD2"/>
                 <constraint firstItem="Wxq-xW-AIb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="w7R-jO-Urh"/>

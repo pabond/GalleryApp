@@ -6,8 +6,6 @@
 //  Copyright © 2017 Pavel Bondar. All rights reserved.
 //
 
-import Foundation
-
 extension Optional {
     var string : String? {
         return self as? String

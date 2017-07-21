@@ -30,8 +30,8 @@ class AllImagesContext: Context {
             case .success(let json):
                 guard let json = json as? Dictionary<String, Any> else { return }
                 (response.response?.statusCode).map {
-                    if $0 == 400 || $0 == 401  {
-                        wSelf.callCompletion(json[Constants.gif])
+                    if $0 == 400 || $0 == 403  {
+                        wSelf.callCompletion($0)
                     } else {
                         wSelf.user?.images.removeAll()
                         if let images = json[Constants.images] as? Array<Dictionary<String, Any>> {
@@ -51,24 +51,15 @@ class AllImagesContext: Context {
     }
     
     private func parseImage(_ json: Dictionary<String, Any>) -> GalleryImage? {
-        guard let bigImage = json[Constants.bigImagePath].string,
-            let smallImage = json[Constants.smallImagePath].string,
-            let id = json[Constants.id].int,
-            let created = json[Constants.created].string,
-            let parameters = json[Constants.parameters] as? Dictionary<String, Any>,
-            let weather = parameters[Constants.weather].string,
-            let address = parameters[Constants.address].string,
-            let latitude = parameters[Constants.latitude].float,
-            let longitude = parameters[Constants.longitude].float
-            else { return nil }
+        let parameters = json[Constants.parameters] as? Dictionary<String, Any>
         
-        return GalleryImage.init(imageUrlString: bigImage,
-                                 smallImageUrlString: smallImage,
-                                 weather: weather,
-                                 address: address,
-                                 id: id,
-                                 created: created,
-                                 latitude: latitude,
-                                 longitude: longitude)
+        return GalleryImage.init(imageUrlString: json[Constants.bigImagePath].string ?? "",
+                                 smallImageUrlString: json[Constants.smallImagePath].string ?? "",
+                                 weather: parameters?[Constants.weather].string ?? "",
+                                 address: parameters?[Constants.address].string ?? "",
+                                 id: json[Constants.id].int ?? 0,
+                                 created: json[Constants.created].string ?? "",
+                                 latitude: parameters?[Constants.latitude].float ?? 0,
+                                 longitude: parameters?[Constants.longitude].float ?? 0)
     }
 }

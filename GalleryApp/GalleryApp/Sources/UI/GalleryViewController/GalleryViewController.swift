@@ -48,7 +48,13 @@ class GalleryViewController: UIViewController, RootViewGettable {
     func onAdd() {
         guard let controller = AddImageViewController.viewController() as? AddImageViewController else { return }
         controller.user = self.user
+        controller.imageAdded = loadImages
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func update(_ refresh: UIRefreshControl) {
+        refresh.beginRefreshing()
+        self.loadImages()
     }
     
     func loadImages() {
@@ -56,8 +62,14 @@ class GalleryViewController: UIViewController, RootViewGettable {
         let context = AllImagesContext(user: self.user, success: { [weak self] (user) in
             self?.rootView?.collectionView?.reloadData()
             self?.rootView?.loading = false
-        }) { [weak self] in
+            self?.refreshControl?.endRefreshing()
+        }) { [weak self] (value) in
+            if value == 403 {
+                self?.onLogout()
+            }
+            
             self?.rootView?.loading = false
+            self?.refreshControl?.endRefreshing()
         }
         
         context.execute()
@@ -81,7 +93,7 @@ class GalleryViewController: UIViewController, RootViewGettable {
     
     private func setUpRefresh() {
         refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(loadImages), for: .valueChanged)
+        refreshControl?.addTarget(self, action: #selector(update(_:)), for: .valueChanged)
         refreshControl.map { rootView?.collectionView?.addSubview($0) }
     }
 }
@@ -112,9 +124,8 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        let height = collectionView.frame.width / cellsPerRow
-        let width = height - inset * 3
-        
+        let height = collectionView.frame.width / cellsPerRow + inset * 2
+        let width = height - inset * 3.5
         return CGSize(width: width, height: height)
     }
     

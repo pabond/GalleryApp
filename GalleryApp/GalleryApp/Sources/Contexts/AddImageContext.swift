@@ -16,7 +16,7 @@ class AddImageContext: Context {
         return "/image"
     }
     
-    init(user: User?, success: ((_: Any) -> ())?, fail: (() -> ())?, image: NewImage?) {
+    init(user: User?, success: ((_: Any) -> ())?, fail: ((_ : Int?) -> ())?, image: NewImage?) {
         super.init(user: user, success: success, fail: fail)
         self.image = image
     }
@@ -27,15 +27,15 @@ class AddImageContext: Context {
     
     override func fillMultipartFormData(_ multipartFormData: MultipartFormData) {
         guard let image = image else { return }
-        UIImageJPEGRepresentation(image.image, 0.1)
+        UIImageJPEGRepresentation(image.image, 0.3)
             .map { multipartFormData.append($0,
                                             withName: Constants.image,
                                             fileName: "\(Constants.image).\(Constants.JPEG)",
                                             mimeType: Constants.imageJPEG) }
         image.description.utf8Encoded.map { multipartFormData.append($0, withName: Constants.description) }
         image.hashTags.utf8Encoded.map { multipartFormData.append($0, withName: Constants.hashtag) }
-        multipartFormData.append(image.latitude.data, withName: Constants.latitude)
-        multipartFormData.append(image.longitude.data, withName: Constants.longitude)
+        String(image.latitude).utf8Encoded.map { multipartFormData.append($0, withName: Constants.latitude) }
+        String(image.longitude).utf8Encoded.map { multipartFormData.append($0, withName: Constants.longitude) }
     }
     
     override func processResponse(_ response: DataResponse<Any>) {
@@ -46,8 +46,8 @@ class AddImageContext: Context {
             case .success(let json):
                 guard let json = json as? Dictionary<String, Any> else { return }
                 (response.response?.statusCode).map {
-                    if $0 == 400 || $0 == 401  {
-                        wSelf.callCompletion(json[Constants.gif])
+                    if $0 == 400 || $0 == 403  {
+                        wSelf.callCompletion($0)
                     } else {
                         wSelf.callCompletion(wSelf.user)
                     }

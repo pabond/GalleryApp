@@ -6,5 +6,6 @@ target 'GalleryApp' do
 	pod 'Kingfisher'
 	pod 'Alamofire'
 	pod 'SwiftGifOrigin'
+	pod 'IQKeyboardManagerSwift'
 end
 

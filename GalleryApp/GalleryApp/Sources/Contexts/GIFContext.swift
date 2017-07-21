@@ -19,7 +19,7 @@ class GIFContext: Context {
     }
     
     override func fillMultipartFormData(_ multipartFormData: MultipartFormData) {
-        multipartFormData.append(NSKeyedArchiver.archivedData(withRootObject: []), withName: Constants.weather)
+  //      multipartFormData.append(NSKeyedArchiver.archivedData(withRootObject: []), withName: Constants.weather)
     }
     
     override var headers : HTTPHeaders? {
@@ -34,10 +34,10 @@ class GIFContext: Context {
             case .success(let json):
                 guard let json = json as? Dictionary<String, Any> else { return }
                 (response.response?.statusCode).map {
-                    if $0 == 400 || $0 == 401  {
-                        wSelf.callCompletion(json[Constants.gif])
+                    if $0 == 400 || $0 == 403  {
+                        wSelf.callCompletion($0)
                     } else {
-                        wSelf.callCompletion(wSelf.user)
+                        wSelf.callCompletion(json[Constants.gif])
                     }
                 }
                 

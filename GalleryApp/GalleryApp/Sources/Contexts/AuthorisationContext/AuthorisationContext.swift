@@ -16,7 +16,7 @@ class AuthorisationContext: Context {
     internal var email: String!
     
     init(success: ((_ : Any)->())?,
-         fail: (()->())?,
+         fail: ((_ : Int?)->())?,
          user: User?,
          password: String,
          email: String,

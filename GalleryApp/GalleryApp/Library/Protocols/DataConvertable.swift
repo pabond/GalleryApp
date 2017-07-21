@@ -22,7 +22,12 @@ extension DataConvertible {
     
     var data: Data {
         var value = self
-        return Data(buffer: UnsafeBufferPointer(start: &value, count: 1))
+        
+        let data = withUnsafePointer(to: &value) {
+            Data(bytes: UnsafePointer($0), count: MemoryLayout.size(ofValue: self))
+        }
+        
+        return data
     }
 }
 

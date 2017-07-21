@@ -11,7 +11,7 @@ import Alamofire
 
 class Context : NSObject, Weakable {
     internal var success: ((_ : Any)->())?
-    internal var fail: (()->())?
+    internal var fail: ((_ : Int?)->())?
     internal var user: User?
     
     private var requestURLString: String {
@@ -35,7 +35,7 @@ class Context : NSObject, Weakable {
     
     init(user: User?,
          success: ((_ : Any)->())?,
-         fail: (()->())?) {
+         fail: ((_ : Int?)->())?) {
         self.success = success
         self.fail = fail
         self.user = user
@@ -61,12 +61,12 @@ class Context : NSObject, Weakable {
         }
     }
     
-    func callCompletion(_ model : Any? = nil) {
+    func callCompletion(_ result : Any? = nil) {
         DispatchQueue.main.async {
-            if let model = model {
-                self.success?(model)
-            } else {
-                self.fail?()
+            if result == nil || ((result as? Int) != nil) {
+                self.fail?(result as? Int)
+            } else if let result = result {
+                self.success?(result)
             }
         }
     }
